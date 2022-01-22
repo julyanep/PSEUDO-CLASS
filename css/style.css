@@ -1,0 +1,80 @@
+body{
+    margin: 0 auto;
+    width: 85%;
+    background-color: rgb(162, 247, 204);
+    color: black;
+    font-size: arial, sans-serif;
+    margin-bottom: 30px;
+}
+div{
+    background-color: ghostwhite;
+    margin-top: 20px;
+}
+.uma{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.uma p:first-child{
+    color: red;
+}
+.uma p:last-child{
+    color: blue;
+}
+.duas{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.duas p:first-of-type{
+    color: green;
+}
+.duas p:last-of-type{
+    color: orange;
+}
+a[title]:hover::after {
+    position: absolute;
+    content: attr(title);
+    padding: 5px 10px;
+    width: 130px;
+    left: 0;
+    top: 25px;
+    border: 1px solid black;
+}
+.p:first-of-type{
+    color: green;
+}
+.p:last-of-type{
+    color: orange;
+}
+.tres{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.tres p:nth-child(2n){
+    background-color: teal;
+}
+.quatro{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.quatro p:nth-child(3n){
+    background-color: orange;
+}
+.form{
+    width: 98%;
+    margin:0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.other{
+    background-color: rgb(214, 220, 221);
+    width: 98%;
+}
+.paragrafo{
+    background-color: rgb(214, 220, 221);
+}
+.paragrafo p{
+    margin: 0;
+}

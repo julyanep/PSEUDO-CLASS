@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title> pseudoclass </title>
+    <style>
+        body{
+    margin: 0 auto;
+    width: 85%;
+    background-color: rgb(162, 247, 204);
+    color: black;
+    font-size: arial, sans-serif;
+    margin-bottom: 30px;
+}
+div{
+    background-color: ghostwhite;
+    margin-top: 20px;
+}
+.uma{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.uma p:first-child{
+    color: red;
+}
+.uma p:last-child{
+    color: blue;
+}
+.duas{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.duas p:first-of-type{
+    color: green;
+}
+.duas p:last-of-type{
+    color: orange;
+}
+a[title]:hover::after {
+    position: absolute;
+    content: attr(title);
+    padding: 5px 10px;
+    width: 130px;
+    left: 0;
+    top: 25px;
+    border: 1px solid black;
+}
+.p:first-of-type{
+    color: green;
+}
+.p:last-of-type{
+    color: orange;
+}
+.tres{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.tres p:nth-child(2n){
+    background-color: teal;
+}
+.quatro{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.quatro p:nth-child(3n){
+    background-color: orange;
+}
+.form{
+    width: 98%;
+    margin:0 auto;
+    background-color: rgb(214, 220, 221);
+}
+.other{
+    background-color: rgb(214, 220, 221);
+    width: 98%;
+}
+.paragrafo{
+    background-color: rgb(214, 220, 221);
+}
+.paragrafo p{
+    margin: 0;
+}
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>PSEUDO-CLASS</h1>
+            <p> Pseudo-classes são recursos que o CSS disponibiliza paara selecionar elementos específicos na tela ou
+                com
+                ase em suas características
+                sem a necessidade de criarmos classes próprias para eles. É como se o browser já colocasse neles algumas
+                classes especiais que estariam
+                disponíveis para nós.<br>
+                Vejamos algumas:<br>
+                <br>
+                <b>e:first-child</b>= pega o elemento (e) que seja primeiro filho de seu elemento-pai.<br>
+                <b>e:last-child</b>= pega o elemento (e) que seja último filho de seu elemento-pai.<br>
+                <b>e:first-of-type</b>= pega o elemento (e) que seja primeiro filho levando em conta seu tipo.<br>
+                <b>e:last-of-type</b>= pega o elemento (e) que seja último filho levando em coonta seu tipo.<br>
+                <b>e:hover</b>= ativa a estilização aplicada ao elemento (e) quando o mouse está sobre ele.<br>
+                <b>e:nth-child(n)</b>= serve como um contador para selecionar os elementos (e).<br>
+                Para uma referência completa das pseudo-classes disponívies, visite <a
+                    href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">w3schools</a>
+            </p>
+
+            <hr size="1cm" color="black">
+
+            <div class="uma">
+                <div class="paragrafo">
+                    <p>Parágrafo 1</p>
+                    <p>Parágrafo 2</p>
+                    <p>Parágrafo 3</p>
+                    <p>Parágrafo 4</p>
+                    <p style="margin-top: 0;">Parágrafo 5</p>
+                </div>
+
+            </div>
+
+            <div class="duas">
+                <div class="paragrafo">
+                    Span é o primeiro filho.<br>
+                    <p>Parágrafo 1 (primeiro filho do tipo parágrafo)</p>
+                    <p>Parágrafo 2</p>
+                    <p>Parágrafo 3</p>
+                    <p>Parágrafo 4</p>
+                    <p style="margin-top: 0;">Parágrafo 5</p>
+                </div>
+
+                <div class="other">
+                    <dd>
+                        <a title="Ussando pseudo" href="#">Link é o primeiro
+                            filho</a>
+                        Span é o segundo filho
+                        <div class="paragrafo">
+                            <p>Parágrafo 1(primeiro filho do tipo parágrafo)</p>
+                            <p>Último parágrafo</p>
+                        </div>
+                </div>
+                </dd>
+            </div>
+
+            <div class="tres">
+                <div class="paragrafo">
+                    <p style="margin-bottom: 0;">Parágrafo 1</p>
+                    <p>Parágrafo 2</p>
+                    <p>Parágrafo 3</p>
+                    <p>Parágrafo 4</p>
+                    <p>Parágrafo 5</p>
+                    <p>Parágrafo 6</p>
+                    <p>Parágrafo 7</p>
+                    <p>Parágrafo 8</p>
+                    <p>Parágrafo 9</p>
+                </div>
+                <p style="margin-top: 0;">Parágrafo 10</p>
+
+            </div>
+
+            <div class="quatro">
+
+                <div class="paragrafo">
+                    <p>Parágrafo 1</p>
+                    <p>Parágrafo 2</p>
+                    <p>Parágrafo 3</p>
+                    <p>Parágrafo 4</p>
+                    <p>Parágrafo 5</p>
+                    <p>Parágrafo 6</p>
+                    <p>Parágrafo 7</p>
+                    <p>Parágrafo 8</p>
+                    <p>Parágrafo 9</p>
+                </div>
+                <p style="margin-top: 0;">Parágrafo 10</p>
+
+            </div>
+
+            <div class="form">
+                <form>
+                    <label for="camporequerido">Campo Requerido:</label>
+                    <input type="text" id="camporequerido">
+                    <br>
+                    <br>
+                    <input type="radio" name="csexo" id="csexo" value="masculino">
+                    <label for="masc">Masculino</label>
+                    <br>
+                    <br>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="cname" name="name">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
